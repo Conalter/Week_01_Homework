@@ -52,3 +52,14 @@ def find_pet_by_name(pet_shop, name)
    end
  return nil
 end
+
+def remove_pet_by_name(pet_shop, name)
+  for pet in pet_shop[:pets]
+  return pet.delete(:name) if name == pet[:name]
+end
+end
+
+def add_pet_to_stock(pet_shop, new_pet)
+  return pet_shop[:pets].push(:new_pet)
+end
+# new_pet works with/without the colon (:)
