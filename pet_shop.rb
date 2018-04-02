@@ -48,27 +48,7 @@ end
 
 def find_pet_by_name(pet_shop, name)
  for pet in pet_shop[:pets]
-   if name == pet[:name]
-     return pet
+   return pet if name == pet[:name]
    end
- end
+ return nil
 end
-
-
-def missing_pet_by_name(pet_shop, name)
-  for pet in pet_shop[:pets]
-    if pet[:name] == name
-      return pet
-    end 
-  end
-end
-
-# def missing_pet_by_name(pet_shop, name)
-#   missing_name = []
-#   for pet in pet_shop[:pets]
-#     if pet == pet[:name]
-#       missing_name << pet
-#     end
-#   end
-#   return missing_name
-# end
